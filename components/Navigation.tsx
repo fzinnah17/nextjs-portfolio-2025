@@ -1,10 +1,22 @@
+"use client";
+
+import { useTheme } from "next-themes";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
-import { Origami, Github, Linkedin, Mail, Sun } from "lucide-react";
+import { Origami, Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 
 export default function Navigation() {
+  const { setTheme, theme } = useTheme();
+
   return (
     <div>
       <header className="flex h-20 w-full shrink-0 items-center px-2 md:px-2">
@@ -107,9 +119,24 @@ export default function Navigation() {
           <Link href="mailto:farnazsamia@gmail.com" aria-label="Email">
             <Mail size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
-          <button aria-label="Toggle Dark Mode">
-            <Sun size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
-          </button>
+          {/* ✅ Dark Mode Toggle */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition focus:ring-0 focus:outline-none"
+                aria-label="Toggle Theme"
+              >
+                {theme === "dark" ? <Moon size={24} /> : <Sun size={24} />}
+              </button>
+
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </header>
     </div>
@@ -137,22 +164,3 @@ function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   )
 }
 
-
-function ShirtIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
-    </svg>
-  )
-}
