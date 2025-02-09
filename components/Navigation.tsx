@@ -6,8 +6,8 @@ import { Origami, Github, Linkedin, Mail, Sun } from "lucide-react";
 
 export default function Navigation() {
   return (
-    <div className="container mx-auto px-4 md:px-6 lg:px-8">
-      <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <div>
+      <header className="flex h-20 w-full shrink-0 items-center px-2 md:px-2">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden">
@@ -98,13 +98,13 @@ export default function Navigation() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="ml-auto flex gap-6">
-          <Link href="https://github.com/YOUR_GITHUB" target="_blank" aria-label="GitHub">
+          <Link href="https://github.com/fzinnah17" target="_blank" aria-label="GitHub">
             <Github size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
-          <Link href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/farnaz-zinnah/" target="_blank" aria-label="LinkedIn">
             <Linkedin size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
-          <Link href="mailto:YOUR_EMAIL@example.com" aria-label="Email">
+          <Link href="mailto:farnazsamia@gmail.com" aria-label="Email">
             <Mail size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
           <button aria-label="Toggle Dark Mode">
