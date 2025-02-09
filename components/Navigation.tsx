@@ -19,8 +19,8 @@ export default function Navigation() {
             <Link href="#" prefetch={false} className="flex items-center">
               <Origami className="h-6 w-6" />
               <span className="text-xl font-extrabold">
-            <span className="text-xs font-extrabold align-super">FZ</span>
-          </span>
+                <span className="text-xs font-extrabold align-super">FZ</span>
+              </span>
             </Link>
 
             <div className="grid gap-2 py-6">
@@ -99,16 +99,16 @@ export default function Navigation() {
         </NavigationMenu>
         <div className="ml-auto flex gap-6">
           <Link href="https://github.com/YOUR_GITHUB" target="_blank" aria-label="GitHub">
-            <Github size={26} className="hover:text-gray-500" />
+            <Github size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
           <Link href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" aria-label="LinkedIn">
-            <Linkedin size={26} className="hover:text-gray-500" />
+            <Linkedin size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
           <Link href="mailto:YOUR_EMAIL@example.com" aria-label="Email">
-            <Mail size={26} className="hover:text-gray-500" />
+            <Mail size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
           <button aria-label="Toggle Dark Mode">
-            <Sun size={26} className="hover:text-gray-500" />
+            <Sun size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </button>
         </div>
       </header>
