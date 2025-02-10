@@ -6,16 +6,10 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Origami, Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import ThemeToggle from "@/components/ThemeToggle";
 
 
 export default function Navigation() {
-  const { setTheme, theme } = useTheme();
 
   return (
     <div>
@@ -109,7 +103,7 @@ export default function Navigation() {
             </NavigationMenuLink>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="ml-auto flex gap-6">
+        <div className="ml-auto flex gap-6 items-center">
           <Link href="https://github.com/fzinnah17" target="_blank" aria-label="GitHub">
             <Github size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
@@ -120,23 +114,7 @@ export default function Navigation() {
             <Mail size={30} className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition" />
           </Link>
           {/* ✅ Dark Mode Toggle */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition focus:ring-0 focus:outline-none"
-                aria-label="Toggle Theme"
-              >
-                {theme === "dark" ? <Moon size={24} /> : <Sun size={24} />}
-              </button>
-
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <ThemeToggle />
         </div>
       </header>
     </div>
