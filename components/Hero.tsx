@@ -1,6 +1,8 @@
 import { ArrowDownRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import FloatingPaths from "@/components/ui/floating-paths";
+
 
 export default function Hero() {
   return (
@@ -21,7 +23,7 @@ export default function Hero() {
         <Badge
           variant= "outline"
           className="text-2xl sm:text-3xl px-6 py-3 font-semibold flex items-center w-max 
-             border-[0px] shadow-lg drop-shadow-7xl"
+          border-[0px] shadow-lg drop-shadow-7xl"
         >
           I am an AI Engineer at Con Edison
           <ArrowDownRight className="ml-2 size-7" />
@@ -39,6 +41,7 @@ export default function Hero() {
           </Button>
         </div>
       </div>
+      {/* <FloatingPaths /> */}
     </section>
   );
 }

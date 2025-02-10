@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navigation />
       <main className="mt-16 space-y-20"> {/* Ensures spacing between sections */}
       <Hero />
+      <AboutMe />
       <h1 className="text-3xl font-bold">Sections 2</h1>
 
         {/* <section id="about">
