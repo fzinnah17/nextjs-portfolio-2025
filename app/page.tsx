@@ -1,11 +1,12 @@
 import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <div className="container mx-auto px-2 md:px-2 lg:px-2">
       <Navigation />
       <main className="mt-16 space-y-20"> {/* Ensures spacing between sections */}
-      <h1 className="text-3xl font-bold">Sections</h1>
+      <Hero />
       <h1 className="text-3xl font-bold">Sections 2</h1>
 
         {/* <section id="about">

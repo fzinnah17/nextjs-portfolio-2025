@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
 import { Origami, Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
-import ThemeToggle from "@/components/ThemeToggle";
+import { ThemeToggle } from "@/components/theme-toggle";
+
 
 
 export default function Navigation() {
