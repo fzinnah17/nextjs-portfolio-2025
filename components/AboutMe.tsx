@@ -19,23 +19,10 @@ export default function AboutMe() {
             <span className="font-bold"> New York University</span>.
           </p> */}
 
-                    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                        I am currently an AI Engineer at{" "}
-                        <Link
-                            href="https://www.conedison.com"
-                            target="_blank"
-                            className="text-blue-600 hover:underline"
-                        >
-                            Con Edison
-                        </Link>, working in the Enterprise Architecture team.
-                        Simultaneously, I am pursuing a part-time Master’s in Computer Engineering at{" "}
-                        <Link
-                            href="https://www.nyu.edu"
-                            target="_blank"
-                            className="text-purple-900 hover:underline"
-                        >
-                            New York University
-                        </Link>.
+                    <p className="text-lg text-gray-700 dark:text-gray-300">
+                        I am currently an AI Engineer at <a href="https://www.coned.com/en" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Con Edison</a>, working in the Enterprise Architecture team.
+                        At the same time, I am pursuing a part-time Master's of Science in Computer Engineering at
+                        <a href="https://engineering.nyu.edu/" target="_blank" rel="noopener noreferrer" className="font-semibold text-purple-600 dark:text-purple-400 hover:underline"> New York University</a>.
                     </p>
 
 
@@ -51,14 +38,20 @@ export default function AboutMe() {
 
                     {/* Hobbies / Interests */}
                     <p className="text-lg text-gray-700 dark:text-gray-300">
-                        Outside of work, I love mentoring at hackathons and CodePath, and enjoy playing badminton with my brother.
+                        Outside of work, I enjoy mentoring at hackathons and collaborating with{" "}
+                        <Link
+                            href="https://www.codepath.org"
+                            target="_blank"
+                            className="font-semibold text-green-600 dark:text-green-400 hover:underline"
+                        >
+                            CodePath
+                        </Link>. I also love playing badminton with my brother.
                     </p>
 
                     {/* Skill Badges */}
                     <div className="flex flex-wrap gap-4">
                         <Skill icon={<Brain className="w-6 h-6" />} label="Machine Learning" />
                         <Skill icon={<Code className="w-6 h-6" />} label="Algorithm Design" />
-                        <Skill icon={<Database className="w-6 h-6" />} label="Big Data" />
                         <Skill icon={<Network className="w-6 h-6" />} label="Neural Networks" />
                     </div>
                 </div>
