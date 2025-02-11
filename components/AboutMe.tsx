@@ -1,5 +1,5 @@
 import type React from "react";
-import { Brain, Code, Database, Network } from "lucide-react";
+import { BotIcon, Brain, Code, CodeSquareIcon, Database, EarIcon, Network } from "lucide-react";
 import Link from "next/link"
 
 
@@ -50,9 +50,10 @@ export default function AboutMe() {
 
                     {/* Skill Badges */}
                     <div className="flex flex-wrap gap-4">
-                        <Skill icon={<Brain className="w-6 h-6" />} label="Machine Learning" />
-                        <Skill icon={<Code className="w-6 h-6" />} label="Algorithm Design" />
-                        <Skill icon={<Network className="w-6 h-6" />} label="Neural Networks" />
+                        <Skill icon={<CodeSquareIcon className="w-6 h-6 text-gray-800" />} label="Python" />
+                        <Skill icon={<Brain className="w-6 h-6" />} label="Algorithm Design" />
+                        <Skill icon={<EarIcon className="w-6 h-6 text-gray-800" />} label="Whisper" />
+                        <Skill icon={<BotIcon className="w-6 h-6" />} label="Machine Learning" />
                     </div>
                 </div>
 
