@@ -50,11 +50,12 @@ export default function AboutMe() {
 
                     {/* Skill Badges */}
                     <div className="flex flex-wrap gap-4">
-                        <Skill icon={<CodeSquareIcon className="w-6 h-6 text-gray-800" />} label="Python" />
+                        <Skill icon={<CodeSquareIcon className="w-6 h-6 text-gray-800 dark:text-gray-200" />} label="Python" />
                         <Skill icon={<Brain className="w-6 h-6" />} label="Algorithm Design" />
-                        <Skill icon={<EarIcon className="w-6 h-6 text-gray-800" />} label="Whisper" />
+                        <Skill icon={<EarIcon className="w-6 h-6 text-gray-800 dark:text-gray-200" />} label="Whisper" />
                         <Skill icon={<BotIcon className="w-6 h-6" />} label="Machine Learning" />
                     </div>
+
                 </div>
 
                 {/* Right Side - Animated Shape */}
