@@ -17,17 +17,20 @@ const experiences = [
     description: "Building AI-driven enterprise solutions for energy optimization.",
     details: [
       "Developed an AI transcription & analysis tool, generating $50K in revenue insights from 20K+ calls using Azure Fast Transcription API & OpenAI.",
-      "Tuned BERT model prompts for image descriptions, improving screen-reader support for 30K visually impaired users.",
+      "Built a OneNote extension for real-time quote retrieval across 30K+ internal files using Azure AI Search.",
+      "Tuned BERT models for image descriptions, improving screen-reader support for 30K visually impaired users.",
       "Extracted targeted energy data from 2M+ customer records using Azure Data Factory for demand forecasting.",
       "Authored AI chatbot documentation (2.7K views) to upskill non-technical staff.",
+      "Trained 3 co-ops on GitHub workflows & Azure portal, leading to 4 successful code commits in 6 weeks.",
     ],
     technologies: ["Azure AI", "NLP", "Machine Learning", "BERT", "Data Engineering"],
+    color: "bg-blue-100 dark:bg-blue-900 border-blue-200 dark:border-blue-800",
   },
   {
     company: "CodePath",
     title: "Teaching Assistant",
     period: "Aug 2023 – Present",
-    description: "Helping students in data structures & algorithms for technical interviews.",
+    description: "Guiding students in data structures & algorithms for technical interviews.",
     details: [
       "Mentored 50+ students in DSA, with 5+ securing internships via mock technical interviews.",
       "Taught clean code & design patterns, improving 6/10 students' coding quality.",
@@ -35,18 +38,20 @@ const experiences = [
       "Achieved a 94 NPS & 4.8/5 satisfaction score, leading to re-selection for the role.",
     ],
     technologies: ["Data Structures", "Algorithms", "Python", "Code Review"],
+    color: "bg-green-100 dark:bg-green-900 border-green-200 dark:border-green-800",
   },
   {
     company: "The Difference",
     title: "Software Developer Intern",
     period: "Dec 2022 – Present",
-    description: "Developed a Flutter fitness app for Android/iOS.",
+    description: "Developing a Flutter fitness app for Android/iOS.",
     details: [
       "Grew user base by 25% in 2 months with PHP & MySQL.",
       "Led 7+ interns in Scrum teams, achieving a 4.5/5 app rating & 3 releases/month.",
       "Optimized progress page load by 20% & cut data transfer by 10MB per session with API sorting.",
     ],
     technologies: ["Flutter", "PHP", "MySQL", "REST APIs"],
+    color: "bg-orange-100 dark:bg-orange-900 border-orange-200 dark:border-orange-800",
   },
 ];
 
@@ -81,13 +86,15 @@ export default function ExperienceSection() {
           ))}
         </div>
 
-        {/* Right Side - Expanded Experience Details */}
+        {/* Right Side - Experience Details */}
         <motion.div
           key={selectedExperience.company}
           {...fadeIn}
           className="w-full"
         >
-          <Card className="bg-accent text-accent-foreground shadow-xl border border-gray-300 dark:border-gray-700 w-full">
+          <Card
+            className={`text-accent-foreground shadow-xl border w-full transition-all duration-300 ${selectedExperience.color}`}
+          >
             <CardContent className="p-8 space-y-4">
               {/* Title & Period */}
               <motion.h3
