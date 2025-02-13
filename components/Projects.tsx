@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Shield, BotIcon as Robot, Network, Lock, Sparkles, ExternalLink, LayoutGrid } from "lucide-react";
+import { Brain, Shield, BotIcon as Robot, Network, Lock, Sparkles, ExternalLink, LayoutGrid, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -57,6 +57,34 @@ const projects = [
       "Integrated motion animations for a seamless experience.",
     ],
   },
+  {
+    icon: Users,
+    title: "Creatorverse",
+    description: "A React & Supabase-powered content creator management platform.",
+    color: "group-hover:text-orange-500",
+    delay: 0.4,
+    link: "#",
+    details: [
+      "Built a smooth UI with React JS & PicoCSS.",
+      "Implemented CRUD operations for content creators using Supabase.",
+      "Developed personalized recommendations & search filters.",
+      "Enabled user authentication for secure content modification.",
+    ],
+  },
+  {
+    icon: Network,
+    title: "CodeFM",
+    description: "A React-based online coding community for tech enthusiasts.",
+    color: "group-hover:text-teal-500",
+    delay: 0.5,
+    link: "https://codefm-client-production.up.railway.app/",
+    details: [
+      "Implemented full-stack app with React, Express, PostgreSQL.",
+      "Enabled user authentication, CRUD posts, and comments.",
+      "Built a dynamic discussion board with real-time updates.",
+      "Designed resource-sharing & networking features for students.",
+    ],
+  },
 ];
 
 export default function Projects() {
@@ -67,8 +95,8 @@ export default function Projects() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      {/* Increased top margin for spacing */}
-      <h2 className="text-3xl font-bold mt-16 mb-6 text-center text-black">
+      {/* Added extra margin for spacing */}
+      <h2 className="text-3xl font-bold mt-20 mb-6 text-center text-black">
         Innovative Ventures
       </h2>
 
