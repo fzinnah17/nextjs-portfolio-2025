@@ -13,7 +13,7 @@ export function Footer() {
         resolvedTheme === "dark" ? "bg-gray-900 text-gray-300" : "bg-gray-100 text-gray-700"
       }`}
     >
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center">
+      <div className="w-full flex flex-col sm:flex-row justify-between items-center px-6 max-w-full">
         <div className="text-sm mb-4 sm:mb-0">© 2024 Farnaz Zinnah. All rights reserved.</div>
         <div className="flex space-x-4">
           <Button variant="ghost" size="icon" asChild>

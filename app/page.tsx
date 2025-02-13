@@ -8,57 +8,31 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper"; // Import the f
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-2 md:px-2 lg:px-2">
-      <Navigation />
-      <main className="mt-20 space-y-20">
+    <>
+      {/* ✅ Container Wrapping Main Sections */}
+      <div className="container mx-auto px-2 md:px-2 lg:px-2">
+        <Navigation />
+        <main className="mt-20 space-y-20">
+          <SectionWrapper>
+            <Hero />
+          </SectionWrapper>
 
-        <SectionWrapper>
-          <Hero />
-        </SectionWrapper>
+          <SectionWrapper>
+            <AboutMe />
+          </SectionWrapper>
 
-        <SectionWrapper>
-          <AboutMe />
-        </SectionWrapper>
+          <SectionWrapper>
+            <Experience />
+          </SectionWrapper>
 
-        <SectionWrapper>
-          <Experience />
-        </SectionWrapper>
+          <SectionWrapper>
+            <Projects />
+          </SectionWrapper>
+        </main>
+      </div> {/* ✅ Correctly closing container */}
 
-        <SectionWrapper>
-          <Projects />
-        </SectionWrapper>
-
-
-        {/* Example of other sections that can also use fade-in */}
-        {/* <SectionWrapper>
-          <section id="about">
-            <h1 className="text-3xl font-bold">About Me</h1>
-            <p>...</p>
-          </section>
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <section id="projects">
-            <h1 className="text-3xl font-bold">Projects</h1>
-            <p>...</p>
-          </section>
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <section id="experience">
-            <h1 className="text-3xl font-bold">Experience</h1>
-            <p>...</p>
-          </section>
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <section id="resume">
-            <h1 className="text-3xl font-bold">Resume</h1>
-            <p>...</p>
-          </section>
-        </SectionWrapper> */}
-      </main>
+      {/* ✅ Full-width Footer placed correctly */}
       <Footer />
-    </div>
+    </>
   );
 }

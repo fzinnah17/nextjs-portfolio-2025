@@ -94,8 +94,8 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
+      className="mb-16"
     >
-      {/* Added extra margin for spacing */}
       <h2 className="text-3xl font-bold mt-20 mb-6 text-center text-black">
         Projects
       </h2>
