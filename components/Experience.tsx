@@ -43,7 +43,7 @@ const experiences = [
   {
     company: "The Difference",
     title: "Software Developer Intern",
-    period: "Dec 2022 – Present",
+    period: "February 2023 – April 2023",
     description: "Developing a Flutter fitness app for Android/iOS.",
     details: [
       "Grew user base by 25% in 2 months with PHP & MySQL.",
@@ -62,7 +62,7 @@ export default function ExperienceSection() {
     <section className="py-20 px-4">
       <motion.h2
         {...fadeIn}
-        className="text-4xl font-extrabold mb-8 text-center text-primary"
+        className="text-4xl font-extrabold mb-8 text-primary"
       >
         Experience
       </motion.h2>
