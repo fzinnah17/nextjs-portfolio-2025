@@ -7,7 +7,7 @@ export default function AboutMe() {
     return (
         <section className="max-w-4xl py-20 px-4">
             {/* Section Heading */}
-            <h1 className="text-4xl font-bold mb-8 text-left">About Me</h1>
+            <h1 className="text-4xl font-bold mb-8">About Me</h1>
 
             <div className="grid md:grid-cols-[80%_45%] gap-40 items-center">
                 {/* Left Side - Text Content */}

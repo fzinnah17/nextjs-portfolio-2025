@@ -17,11 +17,9 @@ const experiences = [
     description: "Building AI-driven enterprise solutions for energy optimization.",
     details: [
       "Developed an AI transcription & analysis tool, generating $50K in revenue insights from 20K+ calls using Azure Fast Transcription API & OpenAI.",
-      "Built a OneNote extension for real-time quote retrieval across 30K+ internal files using Azure AI Search.",
-      "Tuned BERT models for image descriptions, improving screen-reader support for 30K visually impaired users.",
+      "Wrote model prompts for image descriptions, improving screen-reader support for 30K visually impaired users.",
       "Extracted targeted energy data from 2M+ customer records using Azure Data Factory for demand forecasting.",
       "Authored AI chatbot documentation (2.7K views) to upskill non-technical staff.",
-      "Trained 3 co-ops on GitHub workflows & Azure portal, leading to 4 successful code commits in 6 weeks.",
     ],
     technologies: ["Azure AI", "NLP", "Machine Learning", "BERT", "Data Engineering"],
     color: "bg-blue-100 dark:bg-blue-900 border-blue-200 dark:border-blue-800",
@@ -55,14 +53,14 @@ const experiences = [
   },
 ];
 
-export default function ExperienceSection() {
+export default function Experience() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
 
   return (
     <section className="py-20 px-4">
       <motion.h2
         {...fadeIn}
-        className="text-4xl font-extrabold mb-8 text-primary"
+        className="text-4xl font-extrabold mb-8 text-center text-primary"
       >
         Experience
       </motion.h2>
