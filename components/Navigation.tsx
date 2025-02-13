@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
@@ -23,6 +23,8 @@ export default function Navigation() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left">
+          <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+
             <Link href="#" prefetch={false} className="flex items-center">
               <Origami className="h-6 w-6" />
               <span className="text-xl font-extrabold">
