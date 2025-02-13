@@ -3,13 +3,14 @@ import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import { Footer } from "@/components/Footer";
 import { SectionWrapper } from "@/components/ui/SectionWrapper"; // Import the fade-in wrapper
 
 export default function Home() {
   return (
     <div className="container mx-auto px-2 md:px-2 lg:px-2">
       <Navigation />
-      <main className="mt-16 space-y-20"> {/* Ensures spacing between sections */}
+      <main className="mt-20 space-y-20">
 
         <SectionWrapper>
           <Hero />
@@ -27,7 +28,6 @@ export default function Home() {
           <Projects />
         </SectionWrapper>
 
-        <h1 className="text-3xl font-bold">Sections 2</h1>
 
         {/* Example of other sections that can also use fade-in */}
         {/* <SectionWrapper>
@@ -58,6 +58,7 @@ export default function Home() {
           </section>
         </SectionWrapper> */}
       </main>
+      <Footer />
     </div>
   );
 }
