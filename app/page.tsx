@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Experience />
+      <Projects />
+      
       <h1 className="text-3xl font-bold">Sections 2</h1>
 
         {/* <section id="about">
