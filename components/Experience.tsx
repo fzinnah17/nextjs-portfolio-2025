@@ -14,7 +14,7 @@ const experiences = [
     company: "Con Edison",
     title: "AI Engineer – Technical Associate",
     period: "Dec 2022 – Present",
-    description: "Building AI-driven enterprise solutions for energy optimization.",
+    description: "Transforming challenges into smarter solutions with AI and ML, empowering teams with cutting-edge technology to solve real-world problems.",
     details: [
       "Developed an AI transcription & analysis tool, generating $50K in revenue insights from 20K+ calls using Azure Fast Transcription API & OpenAI.",
       "Wrote model prompts for image descriptions, improving screen-reader support for 30K visually impaired users.",
