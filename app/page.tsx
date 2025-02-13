@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <main className="mt-16 space-y-20"> {/* Ensures spacing between sections */}
       <Hero />
       <AboutMe />
+      <Experience />
       <h1 className="text-3xl font-bold">Sections 2</h1>
 
         {/* <section id="about">
