@@ -8,9 +8,7 @@ export function Footer() {
   const { resolvedTheme } = useTheme();
 
   return (
-    <footer
-
-    >
+    <footer>
       <div className="w-full flex flex-col sm:flex-row justify-between items-center px-10 max-w-full">
         <div className="text-sm mb-4 sm:mb-0">© 2025 Farnaz Zinnah. All rights reserved.</div>
         <div className="flex space-x-4">
@@ -36,7 +34,7 @@ export function Footer() {
           </Button>
         </div>
       </div>
-      <div className="h-8"></div>
+      <div className="h-6"></div>
     </footer>
   );
 }
