@@ -96,9 +96,10 @@ export default function Projects() {
       viewport={{ once: true }}
       className="mb-16"
     >
-      <h2 className="text-3xl font-bold mt-20 mb-6 text-center text-black">
+      <h2 className="text-3xl font-bold mt-20 mb-10 text-center text-gray-900 dark:text-white">
         Projects
       </h2>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {projects.map((project, index) => (
