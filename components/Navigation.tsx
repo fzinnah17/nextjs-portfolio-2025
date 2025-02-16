@@ -14,7 +14,7 @@ export default function Navigation() {
 
   return (
     <div>
-      <header className="flex h-20 w-full shrink-0 items-center px-2 md:px-2">
+      <header className="fixed top-0 left-0 w-full z-50 flex h-16 items-center px-2 md:px-2 bg-white dark:bg-gray-950 shadow-md">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden">
