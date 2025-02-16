@@ -75,10 +75,11 @@ export default function Experience() {
             {...fadeIn}
             className={`block w-full text-left px-6 py-3 rounded-lg transition-all duration-300 text-lg font-medium 
               ${selectedExperience.company === exp.company 
-                ? "bg-primary text-black dark:text-black font-bold shadow-md" 
+                ? "bg-black text-white dark:bg-white dark:text-black font-bold shadow-md" 
                 : "text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
               }
-              `}
+            `}
+            
           >
             {exp.company}
           </motion.button>
