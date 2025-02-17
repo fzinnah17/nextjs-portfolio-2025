@@ -6,8 +6,7 @@ import FloatingPaths from "@/components/ui/floating-paths";
 
 export default function Hero() {
   return (
-    <section className="pt-20 pb-32 flex items-center">
-      {/* Adjusted padding to move content up */}
+    <section className="pt-32 pb-32 flex items-center">
       <div className="container max-w-7xl space-y-10 text-left">
         {/* Greeting */}
         <h1 className="text-5xl sm:text-[5rem] font-bold">

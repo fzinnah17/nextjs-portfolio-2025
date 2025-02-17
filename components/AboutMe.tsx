@@ -5,7 +5,8 @@ import Link from "next/link"
 
 export default function AboutMe() {
     return (
-        <section className="max-w-4xl py-20 px-4">
+        <section className="max-w-4xl py-36 pb-12 px-4 scroll-mt-24">
+
             {/* Section Heading */}
             <h1 className="text-4xl font-bold mb-8">About Me</h1>
 
