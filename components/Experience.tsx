@@ -54,14 +54,13 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
+  const [selectedExperience, setSelectedExperience] = useState(
+    experiences.find((exp) => exp.company === "Con Edison") || experiences[0]
+  );
 
   return (
-    <section className="py-20 px-4">
-      <motion.h2
-        {...fadeIn}
-        className="text-4xl font-extrabold mb-8 text-center text-primary"
-      >
+    <section id="experience-conedison" className="py-20 px-4 scroll-mt-24">
+      <motion.h2 {...fadeIn} className="text-4xl font-extrabold mb-8 text-center text-primary">
         Experience
       </motion.h2>
 
