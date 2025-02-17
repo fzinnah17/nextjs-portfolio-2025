@@ -1,6 +1,7 @@
 import type React from "react";
 import { BotIcon, Brain, Code, CodeSquareIcon, Database, EarIcon, Network } from "lucide-react";
 import Link from "next/link"
+import { Slideshow } from "../components/Slideshow";
 
 
 export default function AboutMe() {
@@ -8,7 +9,7 @@ export default function AboutMe() {
         <section className="max-w-4xl py-36 pb-12 px-4 scroll-mt-24">
 
             {/* Section Heading */}
-            <h1 className="text-4xl font-bold mb-8">About Me</h1>
+            <h1 className="text-4xl font-bold mb-8">IT'S ME...</h1>
 
             <div className="grid md:grid-cols-[80%_45%] gap-40 items-center">
                 {/* Left Side - Text Content */}
@@ -59,8 +60,12 @@ export default function AboutMe() {
 
                 </div>
 
-                {/* Right Side - Animated Shape */}
                 <div className="relative">
+                    <Slideshow />
+                </div>
+
+                {/* Right Side - Animated Shape */}
+                {/* <div className="relative">
                     <div className="w-64 h-64 mx-auto bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-full flex items-center justify-center">
                         <svg
                             className="w-40 h-40 text-gray-600 opacity-20"
@@ -77,7 +82,7 @@ export default function AboutMe() {
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-32 h-32 border-4 border-gray-300 dark:border-gray-600 rounded-full animate-pulse"></div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

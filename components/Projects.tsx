@@ -90,16 +90,17 @@ const projects = [
 export default function Projects() {
   return (
     <motion.section
+      id="projects"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="mb-16"
+      className="py-8 mb-16 scroll-mt-32"
     >
-      <h2 className="text-3xl font-bold mt-20 mb-10 text-center text-gray-900 dark:text-white">
-        Projects
-      </h2>
 
+      <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-gray-900 dark:text-white">
+        PROJECTS
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {projects.map((project, index) => (

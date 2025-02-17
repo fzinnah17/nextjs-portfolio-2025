@@ -61,7 +61,7 @@ export default function Experience() {
   return (
     <section id="experience-conedison" className="py-20 px-4 scroll-mt-24">
       <motion.h2 {...fadeIn} className="text-4xl font-extrabold mb-8 text-center text-primary">
-        Experience
+        EXPERIENCE
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-10 max-w-7xl mx-auto">
