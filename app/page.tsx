@@ -13,19 +13,19 @@ export default function Home() {
       <div className="container mx-auto px-2 md:px-2 lg:px-2">
         <Navigation />
         <main className="mt-20 space-y-20">
-          <SectionWrapper>
+          <SectionWrapper id = "home">
             <Hero />
           </SectionWrapper>
 
-          <SectionWrapper>
+          <SectionWrapper id = "about-me">
             <AboutMe />
           </SectionWrapper>
 
-          <SectionWrapper>
+          <SectionWrapper id = "experience">
             <Experience />
           </SectionWrapper>
 
-          <SectionWrapper>
+          <SectionWrapper id = "projects">
             <Projects />
           </SectionWrapper>
         </main>
