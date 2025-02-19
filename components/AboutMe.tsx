@@ -6,12 +6,11 @@ import { Slideshow } from "../components/Slideshow";
 
 export default function AboutMe() {
     return (
-        <section className="max-w-4xl py-36 pb-12 px-4 scroll-mt-24">
+        <section className="max-w-4xl py-36  scroll-mt-24">
 
-            {/* Section Heading */}
             <h1 className="text-4xl font-bold mb-8">IT'S ME...</h1>
 
-            <div className="grid md:grid-cols-[80%_45%] gap-40 items-center">
+            <div className="grid md:grid-cols-[80%_50%] gap-20 items-center">
                 {/* Left Side - Text Content */}
                 <div className="space-y-6">
                     {/* <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -60,7 +59,7 @@ export default function AboutMe() {
 
                 </div>
 
-                <div className="relative">
+                <div className="relative -translate-y-6">
                     <Slideshow />
                 </div>
 

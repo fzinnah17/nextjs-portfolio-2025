@@ -69,7 +69,7 @@ export function Slideshow() {
 
   return (
     <div
-      className="relative w-full h-64 overflow-hidden rounded-lg -mt-16"
+      className="relative w-[100%] h-[400px]  overflow-hidden rounded-lg -mt-6"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -104,7 +104,7 @@ export function Slideshow() {
         </>
       )}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-full h-64 border-4 border-gray-300 dark:border-gray-600 animate-pulse"></div>
+        <div className="w-full h-full border-4 border-gray-300 dark:border-gray-600 animate-pulse"></div>
       </div>
     </div>
   );
