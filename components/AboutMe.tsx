@@ -47,7 +47,7 @@ export default function AboutMe() {
                             className="font-semibold text-green-600 dark:text-green-400 hover:underline"
                         >
                             CodePath
-                        </Link>. I also love playing badminton with my brother.
+                        </Link>. You can check the pictures of the adventures that shaped me here.
                     </p>
 
                     {/* Skill Badges */}
