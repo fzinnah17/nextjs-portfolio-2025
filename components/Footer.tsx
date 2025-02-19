@@ -8,12 +8,11 @@ export function Footer() {
   const { resolvedTheme } = useTheme();
 
   return (
-    <footer>
-      <div className="w-full flex flex-col sm:flex-row justify-between items-center px-10 max-w-full">
-        <div className="text-sm mb-4 sm:mb-0">Built and designed by Farnaz Zinnah. All rights reserved.</div>
-        <div className="flex space-x-4">
-          
-        </div>
+    <footer className="w-full flex flex-col items-center justify-center text-center px-10">
+      <div className="text-sm">
+        Built and designed by Farnaz Zinnah.
+        <br />
+        All rights reserved. ©
       </div>
       <div className="h-6"></div>
     </footer>
