@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
@@ -11,11 +12,13 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 
 export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <div>
       <header className="fixed top-0 left-0 w-full z-50 flex h-16 items-center px-2 md:px-2 bg-white dark:bg-gray-950 shadow-md">
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden">
               <MenuIcon className="h-6 w-6" />
@@ -33,19 +36,19 @@ export default function Navigation() {
             </Link>
 
             <div className="grid gap-2 py-6">
-              <Link href="#home" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+              <Link href="#home" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 Home
               </Link>
-              <Link href="#about-me" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+              <Link href="#about-me" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 About Me
               </Link>
-              <Link href="#experience" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+              <Link href="#experience" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 Experience
               </Link>
-              <Link href="#projects" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+              <Link href="#projects" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 Projects
               </Link>
-              <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+              <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 Resume
               </Link>
             </div>
