@@ -24,7 +24,6 @@ const hackathonImages = [
   "/images/picture21.jpeg",
   "/images/picture22.jpeg",
   "/images/picture23.jpeg",
-  "/images/picture24.jpeg",
   "/images/picture25.jpeg",
   "/images/picture26.jpeg",
   "/images/picture27.jpeg",
