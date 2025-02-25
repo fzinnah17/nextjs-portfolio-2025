@@ -15,6 +15,9 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { MobileProjectCard } from "./MobileProjectCard";
 
 const projects = [
   {
@@ -99,18 +102,8 @@ const projects = [
 ];
 
 export default function MobileProjects() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const IconComponent = projects[currentIndex].icon;
-
-  const nextProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const prevProject = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + projects.length) % projects.length
-    );
-  };
+  const [selectedProject, setSelectedProject] = useState(projects[0])
+  const IconComponent = selectedProject.icon
 
   return (
     <motion.section
@@ -121,68 +114,62 @@ export default function MobileProjects() {
       viewport={{ once: true }}
       className="py-8 mb-16 scroll-mt-32"
     >
-      <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-gray-900 dark:text-white">
-        PROJECTS
-      </h2>
+      <h2 className="text-3xl font-bold mt-10 mb-6 text-center text-gray-900 dark:text-white">PROJECTS</h2>
 
       <div className="max-w-md mx-auto px-4">
+        {/* Circular Project Navigation */}
+        <div className="mb-8 flex justify-center">
+          <div className="relative w-64 h-64">
+            {projects.map((project, index) => {
+              const angle = (index / projects.length) * 2 * Math.PI
+              const x = Math.cos(angle) * 100 + 100
+              const y = Math.sin(angle) * 100 + 100
+              return (
+                <TooltipProvider key={project.title}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <motion.button
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                        onClick={() => setSelectedProject(project)}
+                        className={`absolute w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          selectedProject.title === project.title
+                            ? "bg-primary text-primary-foreground shadow-lg scale-110"
+                            : "bg-muted hover:bg-muted/80"
+                        }`}
+                        style={{
+                          left: `${x}px`,
+                          top: `${y}px`,
+                          transform: "translate(-50%, -50%)",
+                        }}
+                      >
+                        <project.icon className="w-8 h-8" />
+                      </motion.button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{project.title}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Project Details Card */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            key={selectedProject.title}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
           >
-            <Card className="group hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border-border hover:bg-card/80 dark:hover:bg-gradient-to-br dark:hover:from-gray-800 dark:hover:to-gray-700">
-              <CardContent className="p-6">
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <IconComponent
-                    className={`w-12 h-12 transition-colors duration-300 ${projects[currentIndex].color}`}
-                  />
-                  <h3 className="text-xl font-semibold">
-                    {projects[currentIndex].title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {projects[currentIndex].description}
-                  </p>
-                </div>
-
-                <ul className="mt-4 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                  {projects[currentIndex].details.map((detail, i) => (
-                    <li
-                      key={i}
-                      className="before:content-['↪'] before:mr-2 before:text-primary"
-                    >
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button variant="outline" className="mt-4 w-full" asChild>
-                  <a
-                    href={projects[currentIndex].link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Project{" "}
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+            <MobileProjectCard project={selectedProject} />
           </motion.div>
         </AnimatePresence>
-
-        <div className="flex justify-between mt-4">
-          <Button variant="outline" onClick={prevProject}>
-            <ChevronLeft className="w-4 h-4 mr-2" /> Previous
-          </Button>
-          <Button variant="outline" onClick={nextProject}>
-            Next <ChevronRight className="w-4 h-4 ml-2" />
-          </Button>
-        </div>
       </div>
     </motion.section>
-  );
+  )
 }
