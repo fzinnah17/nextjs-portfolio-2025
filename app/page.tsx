@@ -1,12 +1,16 @@
+"use client";
+
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import { Footer } from "@/components/Footer";
-import { SectionWrapper } from "@/components/ui/SectionWrapper"; // Import the fade-in wrapper
+import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { useResponsive } from "@/hooks/useResponsive";
 
 export default function Home() {
+  const isMobile = useResponsive();
   return (
     <>
       {/* ✅ Container Wrapping Main Sections */}
@@ -21,12 +25,12 @@ export default function Home() {
             <AboutMe />
           </SectionWrapper>
 
-          <SectionWrapper id = "experience">
-            <Experience />
+          <SectionWrapper id="experience">
+            <Experience /> {/* ✅ Mobile/Desktop logic handled inside */}
           </SectionWrapper>
 
-          <SectionWrapper id = "projects">
-            <Projects />
+          <SectionWrapper id="projects">
+            <Projects /> {/* ✅ Mobile/Desktop logic handled inside */}
           </SectionWrapper>
         </main>
       </div> {/* ✅ Correctly closing container */}
