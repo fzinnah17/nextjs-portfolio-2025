@@ -95,8 +95,9 @@ export default function MobileExperience() {
           <CardContent className="p-6 space-y-4 relative z-10">
             {/* Animated Color Blob inside the card content */}
             <motion.div
-              className={`absolute top-0 right-0 w-20 h-20 ${experienceColors[selectedExperience.company]} 
-                rounded-bl-full z-0 opacity-70 transition-transform duration-300 group-hover:scale-110`}
+              className={`absolute top-0 right-0 w-20 h-20 ${
+                experienceColors[selectedExperience.company as keyof typeof experienceColors]
+              } rounded-bl-full z-0 opacity-70 transition-transform duration-300 group-hover:scale-110`}
               initial={{ scale: 0.5, opacity: 0.5 }}
               animate={{ scale: 1.2, opacity: 0.7 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
