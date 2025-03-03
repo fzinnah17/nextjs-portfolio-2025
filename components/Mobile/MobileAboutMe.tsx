@@ -80,21 +80,21 @@ export default function AboutMeMobile() {
                   </div>
 
                   <p className="text-base text-gray-700 dark:text-gray-300">
-                    Outside of work, I enjoy mentoring at hackathons and collaborating with{" "}
-                    <Link
-                      href="https://www.codepath.org"
-                      target="_blank"
-                      className="font-semibold text-green-600 dark:text-green-400 hover:underline"
-                    >
+                    Outside of work, I enjoy mentoring CS students at hackathons and through organizations like{" "}
+                    <Link href="https://www.codepath.org" target="_blank" className="font-semibold text-green-600 dark:text-green-400 hover:underline">
                       CodePath
-                    </Link>
-                    .
+                    </Link>,{" "}
+                    <Link href="https://cunytechprep.nyc/" target="_blank" className="font-semibold text-orange-600 dark:text-orange-400 hover:underline">
+                      CUNY Tech Prep (CTP)
+                    </Link>, and{" "}
+                    <Link href="https://rewritingthecode.org/" target="_blank" className="font-semibold text-pink-600 dark:text-pink-400 hover:underline">
+                      Rewriting the Code
+                    </Link>.
                   </p>
 
+
                   <div className="flex flex-wrap gap-2">
-                    <Skill icon={<CodeSquareIcon className="w-4 h-4" />} label="Python" />
                     <Skill icon={<Brain className="w-4 h-4" />} label="Algorithm Design" />
-                    <Skill icon={<EarIcon className="w-4 h-4" />} label="Whisper" />
                     <Skill icon={<BotIcon className="w-4 h-4" />} label="Machine Learning" />
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function AboutMeMobile() {
             }
           </AnimatePresence>
 
-          
+
         </CardContent>
       </Card>
     </section>
