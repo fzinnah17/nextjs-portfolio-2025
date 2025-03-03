@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { BotIcon, Brain, CodeSquareIcon, EarIcon, Cpu, Code, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { Slideshow } from "../Slideshow"
@@ -30,18 +30,18 @@ const mentorships = [
 export default function AboutMe() {
   return (
     <section className="py-12 px-4 md:py-20 md:px-6 max-w-7xl mx-auto scroll-mt-24">
-      <motion.h1
-        className="text-4xl md:text-5xl font-bold mb-8 text-left"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <motion.h2
+        className="text-3xl font-extrabold mb-8 text-center text-primary md:text-left md:ml-[-30px]"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
         IT'S ME...
-      </motion.h1>
+      </motion.h2>
 
       <motion.div whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
-        <Card className="w-full md:w-[calc(100%+80px)] ml-[-40px] bg-white border-none shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-          <CardContent className="p-6">
+        <Card className="w-full md:w-[calc(100%+80px)] ml-[-40px] bg-white dark:bg-gray-900 border-none shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <CardContent className="p-6 text-gray-900 dark:text-gray-100">
             <div className="flex flex-col md:flex-row md:gap-12">
               {/* Left: 60% content */}
               <div className="md:w-3/5 space-y-6">
@@ -74,38 +74,35 @@ export default function AboutMe() {
                   </p>
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4 flex items-center">
-                    <Sparkles className="mr-2 h-6 w-6 text-yellow-500" />
-                    Technologies & Skills
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {technologies.map((tech) => (
-                      <Badge
-                        key={tech.name}
-                        variant="secondary"
-                        className="text-base px-3 py-1 bg-opacity-80 hover:bg-opacity-100 transition-all duration-300"
-                      >
-                        <tech.icon className="w-4 h-4 mr-2" />
-                        {tech.name}
-                      </Badge>
-                    ))}
-                    {skills.map((skill) => (
-                      <Badge
-                        key={skill.name}
-                        variant="outline"
-                        className="text-base px-3 py-1 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                      >
-                        <skill.icon className="w-4 h-4 mr-2" />
-                        {skill.name}
-                      </Badge>
-                    ))}
-                  </div>
-                </motion.div>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="space-y-4 pt-4">
+                      <h3 className="text-xl md:text-2xl font-semibold flex items-center">
+                        <Sparkles className="mr-2 h-6 w-6 text-yellow-500" />
+                        Technologies & Skills
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {technologies.map((tech) => (
+                          <Badge key={tech.name} variant="secondary" className="px-3 py-1 text-sm flex items-center">
+                            <tech.icon className="w-4 h-4 mr-2" />
+                            {tech.name}
+                          </Badge>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+                        {skills.map((skill) => (
+                          <Skill key={skill.name} icon={<skill.icon className="w-4 h-4" />} label={skill.name} />
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -118,7 +115,7 @@ export default function AboutMe() {
                     AI Mentorship & Volunteering
                   </h3>
                   <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
-                    Passionate about fostering AI talent, I actively engage in:
+                    Outside of work, I enjoy mentoring at hackathons and collaborating with:
                   </p>
                   <ul className="list-disc list-inside mt-2 space-y-1">
                     {mentorships.map((mentorship, index) => (
@@ -133,9 +130,6 @@ export default function AboutMe() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-base md:text-lg mt-2 text-gray-700 dark:text-gray-300">
-                    Guiding students in AI development, ethics, and cutting-edge technologies.
-                  </p>
                 </motion.div>
               </div>
 
@@ -148,5 +142,14 @@ export default function AboutMe() {
         </Card>
       </motion.div>
     </section>
+  )
+}
+
+function Skill({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-full px-3 py-1 text-sm">
+      {icon}
+      <span className="font-medium text-gray-800 dark:text-gray-200">{label}</span>
+    </div>
   )
 }

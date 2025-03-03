@@ -60,7 +60,7 @@ export default function AboutMeMobile() {
           </motion.div>
 
           <AnimatePresence>
-            {isExpanded && (
+            {
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
@@ -99,24 +99,10 @@ export default function AboutMeMobile() {
                   </div>
                 </div>
               </motion.div>
-            )}
+            }
           </AnimatePresence>
 
-          <Button
-            variant="ghost"
-            className="w-full mt-4 flex items-center justify-center"
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {isExpanded ? (
-              <>
-                Show Less <ChevronUp className="ml-2 h-4 w-4" />
-              </>
-            ) : (
-              <>
-                Learn More <ChevronDown className="ml-2 h-4 w-4" />
-              </>
-            )}
-          </Button>
+          
         </CardContent>
       </Card>
     </section>
