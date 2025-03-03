@@ -1,10 +1,11 @@
 "use client";
+
 import { useResponsive } from "@/hooks/useResponsive";
-import DesktopProjects from "./DesktopProjects";
-import MobileProjects from "./MobileProjects";
+import DesktopProjects from "./Desktop/DesktopProjects";
+import MobileProjects from "./Mobile/MobileProjects";
 
 export default function Projects() {
-  const isMobile = useResponsive(); // ✅ Now handled properly
+  const deviceType = useResponsive();
 
-  return isMobile ? <MobileProjects /> : <DesktopProjects />;
+  return deviceType === "mobile" ? <MobileProjects /> : <DesktopProjects />;
 }

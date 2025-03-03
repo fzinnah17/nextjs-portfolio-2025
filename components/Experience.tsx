@@ -1,10 +1,11 @@
 "use client";
-import DesktopExperience from "./DesktopExperience";
-import MobileExperience from "./MobileExperience";
+
+import DesktopExperience from "./Desktop/DesktopExperience";
+import MobileExperience from "./Mobile/MobileExperience";
 import { useResponsive } from "@/hooks/useResponsive";
 
 export default function Experience() {
-  const isMobile = useResponsive(); // ✅ Now correctly runs on the client side
+  const deviceType = useResponsive();
 
-  return isMobile ? <MobileExperience /> : <DesktopExperience />;
+  return deviceType ? <MobileExperience /> : <DesktopExperience />;
 }

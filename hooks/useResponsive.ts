@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 
-// Hook to check screen width globally
+// Custom hook to determine if the device is mobile/tablet or desktop
 export function useResponsive() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [deviceType, setDeviceType] = useState<"mobile" | "desktop">("desktop");
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth <= 1024); // Mobile & Tablet <= 1024px
+      setDeviceType(window.innerWidth < 1024 ? "mobile" : "desktop"); // Mobile & Tablet < 1024px
     };
 
     checkScreenSize(); // Check on first load
@@ -17,5 +17,5 @@ export function useResponsive() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  return isMobile;
+  return deviceType;
 }
