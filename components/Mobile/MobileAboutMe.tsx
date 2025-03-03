@@ -46,7 +46,7 @@ export default function AboutMeMobile() {
               >
                 Con Edison
               </a>
-              , working in the Enterprise Architecture team. I'm also pursuing a part-time Master's in Computer Engineering at{" "}
+              , working in the Enterprise Architecture team. I am also pursuing a part-time Master's in Computer Engineering at{" "}
               <a
                 href="https://engineering.nyu.edu/"
                 target="_blank"
