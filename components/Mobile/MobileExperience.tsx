@@ -63,7 +63,7 @@ export default function MobileExperience() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]); // Default to "Con Edison"
 
   return (
-    <section id="experience-mobile" className="py-20 px-4 bg-background">
+    <section id="experience-conedison" className="py-20 px-4 bg-background">
       <motion.h2 {...fadeIn} className="text-3xl font-extrabold mb-8 text-center text-primary">
         EXPERIENCE
       </motion.h2>
