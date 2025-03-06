@@ -12,7 +12,7 @@ const projects = [
     description: "AI financial bot for investment strategies and budget optimization.",
     color: "group-hover:text-blue-500",
     delay: 0,
-    link: "#",
+    link: "https://hack-princeton.vercel.app/",
     details: [
       "Led development for 50+ students using ModalAI.",
       "Implemented blockchain for secure transactions via Verbwire.",
@@ -25,7 +25,7 @@ const projects = [
     description: "Speech assistant using Whisper to help students with social anxiety.",
     color: "group-hover:text-red-500",
     delay: 0.1,
-    link: "#",
+    link: "https://www.youtube.com/watch?v=rl6euOYLWwA&ab_channel=AdityaChavan",
     details: [
       "Assisted 20+ students in improving meeting conversations.",
       "Reduced inappropriate responses 4x using GPT & LangChain.",
@@ -37,7 +37,7 @@ const projects = [
     description: "Textile waste reduction app for underserved communities.",
     color: "group-hover:text-green-500",
     delay: 0.2,
-    link: "#",
+    link: "https://www.youtube.com/watch?v=R9tRzPrh1oM&embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=OTY3MTQ",
     details: [
       "Built donation platform with React, Express & PostgreSQL.",
       "Optimized photo uploads, improving speed by 10ms with JSONB.",
@@ -49,7 +49,7 @@ const projects = [
     description: "Minimalistic, responsive, and performance-optimized personal portfolio.",
     color: "group-hover:text-purple-500",
     delay: 0.3,
-    link: "#",
+    link: "https://github.com/fzinnah17/nextjs-portfolio-2025",
     details: [
       "Developed with TypeScript, ShadCN, Radix UI, and Lucide Icons.",
       "Fully responsive for mobile, tablet, and desktop.",
@@ -63,7 +63,7 @@ const projects = [
     description: "A React & Supabase-powered content creator management platform.",
     color: "group-hover:text-orange-500",
     delay: 0.4,
-    link: "#",
+    link: "https://github.com/fzinnah17/creatorverse",
     details: [
       "Built a smooth UI with React JS & PicoCSS.",
       "Implemented CRUD operations for content creators using Supabase.",
