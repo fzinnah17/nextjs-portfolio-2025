@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -12,11 +16,25 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if this page load was due to a 'reload' (CMD+R, F5, etc.)
+    const navEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
+    const isReload = navEntries[0]?.type === "reload";
+
+    // If it's a refresh AND not already on the home page OR a hash is present,
+    // then redirect to home.
+    if (isReload && (window.location.pathname !== "/" || window.location.hash)) {
+      router.replace("/");
+    }
+  }, [router]);
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
