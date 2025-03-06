@@ -58,7 +58,7 @@ export default function Hero() {
 
         <div className="pt-6 flex flex-col sm:flex-row gap-4">
           <Button className="shadow-md hover:shadow-lg" asChild size="lg">
-            <a href="https://drive.google.com/uc?export=download&id=1EwuJxkFwd1bYaAB-Q5dvWwXlh4sdkVX7" >Download Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1EwuJxkFwd1bYaAB-Q5dvWwXlh4sdkVX7" target="_blank">Download Resume</a>
           </Button>
           <Button className="shadow-md hover:shadow-lg" asChild size="lg" variant="outline">
             <a href="https://www.linkedin.com/in/farnaz-zinnah" target="_blank">
