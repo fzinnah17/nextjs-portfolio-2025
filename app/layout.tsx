@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -35,6 +34,20 @@ export default function RootLayout({
       router.replace("/");
     }
   }, [router]);
+
+  // On mount, if sessionStorage does not have a theme, clear localStorage's "theme"
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const sessionTheme = sessionStorage.getItem("site-theme");
+      if (!sessionTheme) {
+        localStorage.removeItem("theme");
+      } else {
+        // Sync localStorage with sessionStorage so next-themes picks it up
+        localStorage.setItem("theme", sessionTheme);
+      }
+    }
+  }, []);
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
