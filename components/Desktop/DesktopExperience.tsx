@@ -65,28 +65,31 @@ export default function Experience() {
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === "#experience-conedison") {
+        // Force selection to "Con Edison"
         const conEdisonExp = experiences.find((exp) => exp.company === "Con Edison");
         if (conEdisonExp) {
           setSelectedExperience(conEdisonExp);
         }
+      }
+    };
   
-        // Delay scrolling to ensure correct position
-        setTimeout(() => {
-          const experienceSection = document.getElementById("experience-conedison");
-          if (experienceSection) {
-            experienceSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }, 100);
+    const handleResetExperience = () => {
+      // Always reset experience to "Con Edison" when event is triggered
+      const conEdisonExp = experiences.find((exp) => exp.company === "Con Edison");
+      if (conEdisonExp) {
+        setSelectedExperience(conEdisonExp);
       }
     };
   
     window.addEventListener("hashchange", handleHashChange);
-    handleHashChange(); // Run on mount if hash is already set
+    window.addEventListener("resetExperience", handleResetExperience);
   
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("resetExperience", handleResetExperience);
     };
   }, []);
+  
   
   
 

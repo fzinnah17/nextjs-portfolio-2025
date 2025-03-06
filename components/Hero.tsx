@@ -11,14 +11,24 @@ export default function Hero() {
   }, []);
 
   const handleExperienceClick = () => {
-    window.location.hash = "#experience-conedison"; // Update the hash
+    // Clear any previously selected experience before navigating
+    localStorage.removeItem("selectedExperience");
+  
+    // Force the hash update
+    window.location.hash = "#experience-conedison"; 
+  
+    // Ensure smooth scrolling
     setTimeout(() => {
       const experienceSection = document.getElementById("experience-conedison");
       if (experienceSection) {
         experienceSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
+      
+      // Dispatch a custom event to notify Experience.tsx to reset
+      window.dispatchEvent(new Event("resetExperience"));
     }, 100);
   };
+  
 
 
   return (
@@ -40,7 +50,7 @@ export default function Hero() {
         >
           {/* <a href="#experience-conedison" className="flex items-center scroll-mt-32"> */}
           <a href="#experience-conedison" onClick={handleExperienceClick} className="flex items-center">
-            I am an AI Engineer at Con Edison
+            I am an AI Engineer
             <ArrowDownRight className="ml-2 size-7" />
           </a>
         </Badge>
@@ -48,7 +58,7 @@ export default function Hero() {
 
         <div className="pt-6 flex flex-col sm:flex-row gap-4">
           <Button className="shadow-md hover:shadow-lg" asChild size="lg">
-            <a href="https://drive.google.com/uc?export=download&id=1EwuJxkFwd1bYaAB-Q5dvWwXlh4sdkVX7" target="_blank">Download Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1EwuJxkFwd1bYaAB-Q5dvWwXlh4sdkVX7" >Download Resume</a>
           </Button>
           <Button className="shadow-md hover:shadow-lg" asChild size="lg" variant="outline">
             <a href="https://www.linkedin.com/in/farnaz-zinnah" target="_blank">

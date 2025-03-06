@@ -47,7 +47,8 @@ export default function Navigation() {
               <Link href="#projects" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 Projects
               </Link>
-              <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
+              <Link href="https://drive.google.com/file/d/1EwuJxkFwd1bYaAB-Q5dvWwXlh4sdkVX7/view?usp=sharing"
+                target="_blank" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false} onClick={closeMenu}>
                 Resume
               </Link>
             </div>
