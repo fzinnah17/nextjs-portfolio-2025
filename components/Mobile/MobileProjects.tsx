@@ -7,15 +7,9 @@ import {
   Shield,
   BotIcon as Robot,
   Network,
-  ExternalLink,
   LayoutGrid,
-  Users,
-  ChevronLeft,
-  ChevronRight,
+  Users
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { MobileProjectCard } from "./MobileProjectCard";
 
@@ -103,8 +97,6 @@ const projects = [
 
 export default function MobileProjects() {
   const [selectedProject, setSelectedProject] = useState(projects[0])
-  const IconComponent = selectedProject.icon
-
   return (
     <motion.section
       id="projects-mobile"

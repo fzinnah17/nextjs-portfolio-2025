@@ -1,18 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BotIcon, Brain, CodeSquareIcon, EarIcon, ChevronDown, ChevronUp } from 'lucide-react';
+import { BotIcon, Brain } from 'lucide-react';
 import Link from "next/link";
 import { Slideshow } from "../Slideshow";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useResponsive } from "@/hooks/useResponsive";
 
 export default function AboutMeMobile() {
   const isMobile = useResponsive();
-  const [isExpanded, setIsExpanded] = useState(false);
 
   if (!isMobile) return null;
 
@@ -24,7 +21,7 @@ export default function AboutMeMobile() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        IT'S ME...
+        IT&apos;S ME...
       </motion.h1>
 
       <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-none shadow-lg overflow-hidden">
@@ -46,7 +43,7 @@ export default function AboutMeMobile() {
               >
                 Con Edison
               </a>
-              , working in the Enterprise Architecture team. I am also pursuing a part-time Master's in Computer Engineering at{" "}
+              , working in the Enterprise Architecture team. I am also pursuing a part-time Master&apos;s in{" "}
               <a
                 href="https://engineering.nyu.edu/"
                 target="_blank"

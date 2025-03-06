@@ -7,10 +7,8 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import { Footer } from "@/components/Footer";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { useResponsive } from "@/hooks/useResponsive";
 
 export default function Home() {
-  const isMobile = useResponsive();
   return (
     <>
       {/* ✅ Container Wrapping Main Sections */}

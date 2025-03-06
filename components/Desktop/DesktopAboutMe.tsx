@@ -40,7 +40,7 @@ export default function AboutMe() {
         {...fadeIn}
         className="text-3xl font-extrabold mb-8 text-center text-primary"
       >
-        IT'S ME...
+        IT&apos;S ME...
       </motion.h2>
 
       <motion.div whileHover={{ y: -10 }} transition={{ type: "spring", stiffness: 300 }}>
@@ -59,7 +59,7 @@ export default function AboutMe() {
                   >
                     Con Edison
                   </a>
-                  , working in the Enterprise Architecture team. I am also pursuing a part-time Master's in{" "}
+                  , working in the Enterprise Architecture team. I am also pursuing a part-time Master&apos;s in{" "}
                   <a
                     href="https://engineering.nyu.edu/"
                     target="_blank"

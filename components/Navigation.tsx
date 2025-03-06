@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useTheme } from "next-themes";
 import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu"
-import { Origami, Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
+import { Origami, Github, Linkedin, Mail } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 

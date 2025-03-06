@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -62,6 +62,34 @@ const experiences = [
 export default function MobileExperience() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]); // Default to "Con Edison"
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === "#experience-conedison") {
+        const conEdisonExp = experiences.find((exp) => exp.company === "Con Edison");
+        if (conEdisonExp) {
+          setSelectedExperience(conEdisonExp);
+        }
+  
+        // Delay scrolling to ensure correct position
+        setTimeout(() => {
+          const experienceSection = document.getElementById("experience-conedison");
+          if (experienceSection) {
+            experienceSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      }
+    };
+  
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange(); // Run on mount if hash is already set
+  
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+  
+
+  
   return (
     <section id="experience-conedison" className="py-20 px-4 bg-background">
       <motion.h2 {...fadeIn} className="text-3xl font-extrabold mb-8 text-center text-primary">

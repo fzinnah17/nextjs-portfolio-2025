@@ -1,10 +1,26 @@
+import { useEffect } from "react";
 import { ArrowDownRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import FloatingPaths from "@/components/ui/floating-paths";
-
 
 export default function Hero() {
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0); // Only reset scroll on a fresh page load
+    }
+  }, []);
+
+  const handleExperienceClick = () => {
+    window.location.hash = "#experience-conedison"; // Update the hash
+    setTimeout(() => {
+      const experienceSection = document.getElementById("experience-conedison");
+      if (experienceSection) {
+        experienceSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
+
+
   return (
     <section className="pt-32 pb-32 flex items-center">
       <div className="container max-w-7xl space-y-10 text-left">
@@ -22,7 +38,8 @@ export default function Hero() {
           className="text-2xl sm:text-3xl px-6 py-3 font-semibold flex items-center w-max 
   border-[0px] shadow-lg drop-shadow-7xl cursor-pointer"
         >
-          <a href="#experience-conedison" className="flex items-center">
+          {/* <a href="#experience-conedison" className="flex items-center scroll-mt-32"> */}
+          <a href="#experience-conedison" onClick={handleExperienceClick} className="flex items-center">
             I am an AI Engineer at Con Edison
             <ArrowDownRight className="ml-2 size-7" />
           </a>
@@ -40,7 +57,6 @@ export default function Hero() {
           </Button>
         </div>
       </div>
-      {/* <FloatingPaths /> */}
     </section>
   );
 }
