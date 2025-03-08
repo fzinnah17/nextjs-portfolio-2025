@@ -19,7 +19,7 @@ I am currently an AI Engineer at [Con Edison](https://www.coned.com/en), working
 
 ## Video Walkthrough
 
-🔗 Link to deployed app: farnazzinnah.com
+🔗 Link to deployed app: www.farnazzinnah.com
 
 <img src= 'https://github.com/fzinnah17/nextjs-portfolio-2025/blob/main/public/my-2025-portfolio-GIF.gif' title='Video Walkthrough of Portfolio'>
 
