@@ -84,7 +84,7 @@ This project is licensed under the MIT License.
 
 Feel free to reach out to me via:
 
-- **Email**: farnaz.zinnah@example.com
+- **Email**: farnazsamia@gmail.com
 - **LinkedIn**: [linkedin.com/in/farnaz-zinnah](https://www.linkedin.com/in/farnaz-zinnah)
 - **GitHub**: [github.com/fzinnah17](https://github.com/fzinnah17)
 
