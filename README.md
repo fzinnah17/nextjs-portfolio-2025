@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio of Farnaz Zinnah
 
-## Getting Started
+Welcome to the repository of my personal portfolio, showcasing my journey, skills, and projects in the field of AI and software development.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [About](#about)
+- [Video Walkthrough](#video-walkthrough)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I am currently an AI Engineer at [Con Edison](https://www.coned.com/en), working in the Enterprise Architecture team. Concurrently, I am pursuing a part-time Master's in Computer Engineering at [NYU](https://engineering.nyu.edu/). This portfolio serves as a platform to present my professional journey, technical skills, and the projects I have undertaken.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Video Walkthrough
 
-## Learn More
+🔗 Link to deployed app: farnazzinnah.com
 
-To learn more about Next.js, take a look at the following resources:
+<img src= 'https://github.com/fzinnah17/nextjs-portfolio-2025/blob/main/public/my-2025-portfolio-GIF.gif' title='Video Walkthrough of Portfolio'>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Responsive Design**: Optimized for various devices, ensuring a seamless user experience across desktops, tablets, and mobile devices.
+- **Dark Mode Support**: Users can switch between light and dark themes based on their preference.
+- **Interactive Components**: Engaging UI elements built with modern web technologies.
+- **Project Showcase**: Detailed presentation of selected projects with descriptions, technologies used, and links to live demos or repositories.
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Language**: TypeScript
+- **Framework**: Next.js 13
+- **UI Components**: Radix UI
+- **Styling**: Tailwind CSS
+- **Component Library**: shadcn
+- **Icons**: Lucide
+- **Dark Mode Management**: next-themes
+- **State Management**: React Hooks
+- **Version Control**: Git
+- **Deployment**: Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Installation
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**:
+
+   Navigate to `http://localhost:3000` to view the portfolio.
+
+## Usage
+
+- **Navigation**: Use the top navigation bar to explore different sections such as About, Experience, and Projects.
+- **Theme Toggle**: Switch between light and dark modes using the theme toggle button located at the top right corner.
+- **Project Details**: Click on individual projects to view detailed information, including descriptions, technologies used, and links to live demos or source code.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+Feel free to reach out to me via:
+
+- **Email**: farnaz.zinnah@example.com
+- **LinkedIn**: [linkedin.com/in/farnaz-zinnah](https://www.linkedin.com/in/farnaz-zinnah)
+- **GitHub**: [github.com/fzinnah17](https://github.com/fzinnah17)
+
+Thank you for visiting my portfolio! 
